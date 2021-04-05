@@ -1,0 +1,110 @@
+body{
+    background-color: sandybrown;
+    color: black;
+    font-family: sans-serif;
+}
+.heading{
+    text-align: center;
+    
+}
+.container{
+    height: auto;
+    width: 600px;
+    background-color: rgba(237, 243, 243, 0.788);
+
+    margin-left: 30% ;
+    overflow-y: auto;
+}
+.description{
+    border-bottom: 1px solid black ;
+    height: 80px;
+}
+.descrip-word{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#descript-input{
+    margin-top: 15px;
+    display: block;
+    border: none;
+    padding: 10px;
+    width: 90%;
+    background: none;
+}
+
+.category,.due-date{
+    display: inline-block;
+    margin-top: 15px;
+}
+.category{
+    border-right: 1px solid black;
+    margin-left: 20px;
+    height: 80px;
+    width: 280px;
+}
+.under-category{
+    background: none;
+    padding: 10px;
+}
+.due-date{
+    margin-left: 10px;
+    height: 80px;
+    width: 280px;
+}
+.date-input{
+    background: none;
+    padding: 7px;
+}
+.button{
+    margin-top: 20px;
+    border-top: 1px solid black;
+    
+}
+.submit-buttton,.delete-buttton{
+    margin-top: 15px;
+}
+.submit-buttton{
+    margin-left: 120px;
+    padding: 20px;
+    background-color: rgb(28, 91, 151);
+}
+.delete-button{
+    margin-left: 120px;
+    padding: 20px;
+    background-color: rgb(209, 67, 12);
+    color: white;
+}
+.list{
+    list-style: none;
+    /* border-top:  1px solid black; */
+}
+.todo{
+    margin-top: 20px;
+    margin-left: -40px;
+    border-top: 1px solid grey;
+    
+}
+.check{
+    margin-left: 10px;
+}
+.todo-description{
+    display: inline-block;
+    /* border: 1px solid grey; */
+    font-size: 27px;
+    margin-left: 20px;
+    margin-top: 10px;
+    color: rgb(128 153 28);
+    width: auto;
+}
+.todo-dueDate{
+    font-size: 10px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.todo-category{
+    position: absolute;
+    left: 55%;
+    margin-top: 12px;
+    background-color: hotpink;
+    padding: 10px;
+}
