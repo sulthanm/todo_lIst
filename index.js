@@ -21,7 +21,7 @@ app.use( function(req,res, next){
 
 app.use('/',require('./routes'));
 
-const PORT =  process.env.port || 8000;
+const PORT =  process.env.PORT || 8000;
 
 
 app.listen(PORT, () => {
