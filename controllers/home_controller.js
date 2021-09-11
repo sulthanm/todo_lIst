@@ -42,6 +42,10 @@ var months = [
 
 
 module.exports.addTodo = function(req, res) {
+  // console.log(req.body);
+  if(req.body.description.length==0){
+    req.body.description = "Not Descripted";
+  }
   Todo.create({
     description :req.body.description,
     category: req.body.category,
@@ -57,8 +61,8 @@ module.exports.addTodo = function(req, res) {
 };
 //  deleting the task
 module.exports.deleteTodo = function(req, res) {
-  // console.log(req.body);
-  Todo.deleteMany({_id:{$in:req.body.id}}, function(err, todo) {
+  console.log(req.body.id);
+Todo.deleteMany({_id:{$in:req.body.id}}, function(err, todo) {
     if (err) {
       console.error(err);
       return res.redirect("/");

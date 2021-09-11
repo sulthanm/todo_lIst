@@ -11,66 +11,88 @@
 </head>
 
 <body>
-    <h1 class="heading">Todo App</h1>
+    
     <div class="container">
-        
+        <center>
+            <h1 class="heading">Todo App</h1>
+        </center>
         <form class="addTodo" action="addTodo" method="POST">
             
-            <!-- description -->
+          
 
             <div class="description">
                 <div class="col-1-of-1">
                     <p class="descrip-word">Description</p>
-                    <input type="text" id="descript-input" name="description" placeholder="Descript your task">
+                    <input type="text" id="descript-input" name="description" placeholder="Descript your task" >
                 </div>
 
             </div>
 
-            <!-- category -->
+           
 
-            
-                <div class="category">
-                    <p>Category</p>
-                    <select name="category" class="under-category">
-                        <option selected>Choose...</option>
-                        <option value="personal">Personal</option>
-                        <option value="work">Work</option>
-                        <option value="school">School</option>
-                        <option value="cleaning">Cleaning</option>
-                        <option value="other">Other</option>
-                    </select>
+                <div id="cat-container">
+                    <div class="category">
+                        <p>Category</p>
+                        <select name="category" class="under-category">
+                            <option selected>Choose...</option>
+                            <option value="personal">Personal</option>
+                            <option value="work">Work</option>
+                            <option value="school">School</option>
+                            <option value="cleaning">Cleaning</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+    
+                 
+                    
+                    <div class="due-date">
+                        <p>Due date</p>
+                        <input type="date" name="dueDate" class="date-input">
+                    </div>
                 </div>
-
-                <!-- dueDate -->
                 
-                <div class="due-date">
-                    <p>Due date</p>
-                    <input type="date" name="dueDate" class="date-input">
-                </div>
             
-
-            <div class="button">
-                <button type="submit" class="submit-buttton"><i class="fas fa-plus"></i> ADD TASK</button>
-                <button type="submit" formaction="/deleteTodo" class="delete-button"><i class="fas fa-trash"></i> DELETE TASK</button>
+            <div class="for-border"></div>
+            <div class="btnn">
+                <button type="submit" class="submit-button"> ADD TASK</button>
+                <button type="submit" formaction="/deleteTodo" class="delete-button"> DELETE TASK</button>
             </div>
+
+            <div class="for-border"></div>
             <ul class="list">
                 <% for(let i=0;i<todos.length;i++) { %>
-                <li class="todo">
-                    <input class="check" type="checkbox" name="id" value="<%= todos[i]._id %>" />
-                    <span class="todo-description">
-                        <%= todos[i].description %>
-                    </span>
-        
-                    <span class="todo-dueDate">
-                        <i class="far fa-calendar-alt"></i>
-                        <%= month[todos[i].dueDate.getMonth()] %> <%= todos[i].dueDate.getDate() %>,
-                        <%= todos[i].dueDate.getFullYear() %>
-                    </span>
-
-                    <span class="todo-category">
-                        <%= todos[i].category %>
-                    </span>
-                </li>
+                    
+                    
+                        <li>
+                            <div class="todo">
+                                <div class="check">
+                                    <input  type="checkbox" name="id" value="<%= todos[i]._id %>" />
+                                </div>
+                                
+                                <div class="todo-description">
+                                    <div class="content">
+                                        <%= todos[i].description %>
+                                    </div>
+                                    <div class="todo-dueDate">
+                                        <i class="far fa-calendar-alt"></i>
+                                        <%= month[todos[i].dueDate.getMonth()] %> <%= todos[i].dueDate.getDate() %>,
+                                        <%= todos[i].dueDate.getFullYear() %>
+                                    </div>
+                                </div>
+                    
+                                
+                                <div class="todo-category">
+                                        <center>
+                                            <%= todos[i].category %>
+                                        </center>
+                                        
+                                    
+                                </div>
+                            </div>
+                        </li>
+                    
+                    <div class="for-border"></div>
+                
                 <% } %>
             </ul>
 

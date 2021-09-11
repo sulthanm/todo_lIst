@@ -3,7 +3,7 @@ const mongoose= require('mongoose');
 const todoSchema= new mongoose.Schema({
     description: {
         type: String,
-        required: true,
+        required: true
 
     },
     category:{
